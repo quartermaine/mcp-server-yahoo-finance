@@ -195,10 +195,7 @@ Volume: 1,123,456
 - **Documentation**:
   - Add detailed API documentation for developers who want to extend the functionality.
 
----
-
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
