@@ -1,4 +1,3 @@
-```markdown
 # MCP Yahoo Finance Server
 
 The **MCP Yahoo Finance Server** is a tool designed to fetch real-time stock data, company information, and historical price data using the Yahoo Finance API. It integrates with the Multi-Client Protocol (MCP) framework to provide seamless communication between clients and the server.
@@ -11,7 +10,6 @@ The **MCP Yahoo Finance Server** is a tool designed to fetch real-time stock dat
 5. [Examples](#examples)
 6. [TODO](#todo)
 
----
 
 ## Features
 - Fetch current stock prices for any given stock symbol.
@@ -20,7 +18,6 @@ The **MCP Yahoo Finance Server** is a tool designed to fetch real-time stock dat
 - Built on the MCP framework for easy integration with clients.
 - Powered by **Azure OpenAI** for natural language query processing.
 
----
 
 ## Installation
 
