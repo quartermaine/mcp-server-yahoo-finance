@@ -200,15 +200,6 @@ if __name__ == "__main__":
 
 
 
-## Resources
-
-# https://modelcontextprotocol.info/docs/tutorials/building-a-client/#server-path-issues
-
-# https://modelcontextprotocol.info/docs/quickstart/server/
-
-# https://gist.github.com/zckly/f3f28ea731e096e53b39b47bf0a2d4b1
-
-# https://github.com/kimtth/mcp-aoai-web-browsing/blob/main/client_bridge/bridge.py
 
 # Query: Get current price of AAPL
 
