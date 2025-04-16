@@ -184,7 +184,7 @@ class MCPClient:
 
 async def main():
     if len(sys.argv) < 2:
-        print("Usage: python client.py C:\\Users\\andreas.christopoulo\\Desktop\\mcp-server\\weather.py")
+        print("Usage: python client.py C:\\Users\\<USER>\\Desktop\\mcp-server\\weather.py")
         sys.exit(1)
         
     client = MCPClient()
