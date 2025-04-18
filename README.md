@@ -88,8 +88,8 @@ After running this command, Uvicorn will print a log message with the URL where 
 ```
 INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
+
 Open the provided link (http://127.0.0.1:8000) in your browser to access the UI built with DaisyUI components 
----
 
 ## Environment Configuration
 
