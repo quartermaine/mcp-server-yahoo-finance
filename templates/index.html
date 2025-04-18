@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+    <title>MCP Client Dashboard</title>
+</head>
+<body>
+    <div class="hero min-h-screen bg-base-200">
+        <div class="text-center hero-content">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold">MCP Client Dashboard</h1>
+                <p class="py-6">Interact with the MCP server seamlessly.</p>
+                <form id="query-form">
+                    <input type="text" id="query-input" placeholder="Enter your query" class="input input-bordered w-full max-w-xs mb-4" style="width: 500px;">
+                    <button type="submit" class="btn btn-primary">Submit Query</button>
+                </form>
+                <div id="result" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("query-form").addEventListener("submit", async (event) => {
+            event.preventDefault(); // Prevent the default form submission
+
+            const query = document.getElementById("query-input").value;
+
+            // Send the request as JSON
+            const response = await fetch("/api/query", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ query: query }),
+            });
+
+            const result = await response.json();
+            document.getElementById("result").innerText = result.response;
+        });
+    </script>
+</body>
+</html>

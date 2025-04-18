@@ -1,6 +1,9 @@
-# MCP Yahoo Finance Server
+# MCP Yahoo Finance Server and UI
+
+![Alt Text](images/chat-interface.png)
 
 The **MCP Yahoo Finance Server** is a tool designed to fetch real-time stock data, company information, and historical price data using the Yahoo Finance API. It integrates with the Multi-Client Protocol (MCP) framework to provide seamless communication between clients and the server.
+The project also includes a web-based UI built using FastAPI and DaisyUI components , enabling users to interact with the server through an intuitive interface
 
 ## Table of Contents
 1. [Features](#features)
@@ -17,6 +20,7 @@ The **MCP Yahoo Finance Server** is a tool designed to fetch real-time stock dat
 - Get historical stock price data for a specific date range.
 - Built on the MCP framework for easy integration with clients.
 - Powered by **Azure OpenAI** for natural language query processing.
+- ncludes a web-based UI built using FastAPI and DaisyUI components  for a user-friendly experience
 
 
 ## Installation
@@ -61,28 +65,30 @@ source .venv/bin/activate
 
 Install required dependencies:
 ```bash
-uv add mcp anthropic python-dotenv openai yfinance
+uv add fastapi jinja2 uvicorn mcp anthropic python-dotenv openai yfinance
 ```
 
 ## Usage
 
 ### Running the Server
-To run the Yahoo Finance MCP server, execute the following command:
+To run the Yahoo Finance MCP server, execute the following command in one terminal with the activated environment:
 ```bash
 python server.py
 ```
 
-### Running the Client
-To run the client and connect it to the server, use the following command:
+ 
+Running the UI 
+### Running the UI
+In another terminal with the activated environment, start the FastAPI app (UI) using Uvicorn: 
 ```bash
-uv run client.py <path_to_mcp_server_script>
+uvicorn main:app --reload
 ```
 
-For example:
-```bash
-uv run client.py /home/<user_name>/Desktop/mcp-server/yahoo_finance.py
+After running this command, Uvicorn will print a log message with the URL where the app is running, typically:
 ```
-
+INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+```
+Open the provided link (http://127.0.0.1:8000) in your browser to access the UI built with DaisyUI components 
 ---
 
 ## Environment Configuration
@@ -178,11 +184,6 @@ Volume: 1,123,456
 
 ## TODO
 
-- **Build a User Interface (UI)**:
-  - Develop a web-based or desktop UI for easier interaction with the server.
-  - Allow users to input queries and view results without needing to run commands manually.
-  - Example: Use frameworks like Flask (for web) or Tkinter (for desktop).
-
 - **Enhance Error Handling**:
   - Provide more descriptive error messages for invalid inputs or failed API calls.
 
@@ -199,3 +200,6 @@ Volume: 1,123,456
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+
