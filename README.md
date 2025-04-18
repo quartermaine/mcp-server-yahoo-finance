@@ -1,6 +1,6 @@
 # MCP Yahoo Finance Server and UI
 
-<img src="images/chat-interface.png" height="240px" width="240px">
+<img src="images/chat_interface.png" height="240px" width="240px">
 
 The **MCP Yahoo Finance Server** is a tool designed to fetch real-time stock data, company information, and historical price data using the Yahoo Finance API. It integrates with the Multi-Client Protocol (MCP) framework to provide seamless communication between clients and the server.
 The project also includes a web-based UI built using FastAPI and DaisyUI components , enabling users to interact with the server through an intuitive interface
