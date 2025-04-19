@@ -5,6 +5,13 @@
 The **MCP Yahoo Finance Server** is a tool designed to fetch real-time stock data, company information, and historical price data using the Yahoo Finance API. It integrates with the Multi-Client Protocol (MCP) framework to provide seamless communication between clients and the server.
 The project also includes a web-based UI built using FastAPI and DaisyUI components , enabling users to interact with the server through an intuitive interface
 
+Before proceeding, ensure you have cloned the repository:
+
+```bash
+git clone https://github.com/quartermaine/mcp-server-yahoo-finance.git
+cd <repository-directory>
+```
+
 ## Table of Contents
 1. [Features](#features)
 2. [Installation](#installation)
@@ -44,6 +51,10 @@ pipx ensurepath
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) using the official installation script:
 ```bash
 wget -qO- https://astral.sh/uv/install.sh | sh
+```
+After running the above command, make sure to source the environment variables by running:
+```bash
+source $HOME/.local/bin/env
 ```
 
 #### 3. Create a Project and Environment
