@@ -84,7 +84,7 @@ uv add fastapi jinja2 uvicorn mcp anthropic python-dotenv openai yfinance
 ### Running the Server
 To run the Yahoo Finance MCP server, execute the following command in one terminal with the activated environment:
 ```bash
-uv run yahoo_finance.p
+uv run yahoo_finance.py
 ```
 
 ### Running the UI
