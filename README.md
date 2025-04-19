@@ -75,8 +75,7 @@ To run the Yahoo Finance MCP server, execute the following command in one termin
 ```bash
 uv run yahoo_finance.p
 ```
- 
-Running the UI 
+
 ### Running the UI
 In another terminal with the activated environment, start the FastAPI app (UI) using Uvicorn: 
 ```bash
