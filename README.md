@@ -89,7 +89,7 @@ To build and run the application using Docker, follow these steps:
 Use the docker build command to create a Docker image. Replace <tag_name> with a name of your choice (e.g., mcp-finance): 
 
 ```bash
-docker build -t \<tag_name\> .
+docker build -t <tag_name> .
 ```
 Example: 
 ```bash
