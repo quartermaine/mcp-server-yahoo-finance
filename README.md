@@ -85,30 +85,30 @@ uv add fastapi jinja2 uvicorn mcp anthropic python-dotenv openai yfinance
 
 To build and run the application using Docker, follow these steps: 
 
-  1. **Build the Docker Image**:
-    Use the docker build command to create a Docker image. Replace <tag_name> with a name of your choice (e.g., mcp-finance): 
+1. **Build the Docker Image**:
+Use the docker build command to create a Docker image. Replace <tag_name> with a name of your choice (e.g., mcp-finance): 
 
-    ```bash
-    docker build -t <tag_name> .
-    ```
-    Example: 
-    ```bash
-    docker build -t mcp-finance .
-    ```
+```bash
+docker build -t \<tag_name\> .
+```
+Example: 
+```bash
+docker build -t mcp-finance .
+```
 
-  2. **Run the Docker Container** :
-    Use the docker run command to start the container. Map port 8000 on your host machine to port 8000 in the container: 
-    
-    ```bash
-    docker run -p 8000:8000 <tag_name>
-    ```
-    Example: 
-    ```bash
-    docker run -p 8000:8000 mcp-finance
-    ```
+2. **Run the Docker Container** :
+Use the docker run command to start the container. Map port 8000 on your host machine to port 8000 in the container: 
 
-  3. **Access the UI** :
-    After running the container, navigate to the URL printed in the terminal logs (e.g., http://0.0.0.0:8000) to access the web-based 
+```bash
+docker run -p 8000:8000 <tag_name>
+```
+Example: 
+```bash
+docker run -p 8000:8000 mcp-finance
+```
+
+3. **Access the UI** :
+After running the container, navigate to the URL printed in the terminal logs (e.g., http://0.0.0.0:8000) to access the web-based 
 
 ## Usage
 
