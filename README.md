@@ -170,7 +170,7 @@ This project uses **Azure OpenAI** as the Language Model (LLM) provider. To conf
    The `python-dotenv` library automatically loads the `.env` file when running the server or client. Ensure the `.env` file is located in the root directory of your project.
 
 
-## INtegrating with Github Copilot
+## Integrating with Github Copilot
 
 To integrate the MCP Yahoo Finance Server with GitHub Copilot in Visual Studio Code, follow these steps: 
  
