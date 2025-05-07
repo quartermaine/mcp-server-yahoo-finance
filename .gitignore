@@ -9,3 +9,10 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+# Ignore VSCode MCP configuration
+.vscode/mcp.json
+
+# Ignore the start-mcp.sh script
+start-mcp.sh
+

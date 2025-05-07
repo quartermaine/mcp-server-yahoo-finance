@@ -18,6 +18,7 @@ cd <repository-directory>
 3. [Docker Setup](#docker-setup)
 3. [Usage](#usage)
 4. [Environment Configuration](#environment-configuration)
+5. [Integrating with GitHub Copilot](#integrating-with-github-copilot)
 5. [Examples](#examples)
 6. [TODO](#todo)
 
@@ -167,6 +168,63 @@ This project uses **Azure OpenAI** as the Language Model (LLM) provider. To conf
 
 4. **Load Environment Variables**:
    The `python-dotenv` library automatically loads the `.env` file when running the server or client. Ensure the `.env` file is located in the root directory of your project.
+
+
+## INtegrating with Github Copilot
+
+To integrate the MCP Yahoo Finance Server with GitHub Copilot in Visual Studio Code, follow these steps: 
+ 
+1. **Create a start-mcp.sh script** 
+
+Create a shell script named start-mcp.sh to activate the virtual environment and start the server. Add the following content to the file: 
+
+```bash
+#!/bin/bash
+
+# Navigate to the project directory
+cd /<path_to>?/mcp-server-yahoo-finance || { echo "Directory not found"; exit 1; }
+
+# Activate the virtual environment
+source .venv/bin/activate || { echo "Failed to activate virtual environment"; exit 1; }
+
+# Run the server
+uv run yahoo_finance.py || { echo "Failed to start server"; exit 1; }
+
+```
+
+Make the script executable:
+
+```bash
+chmod +x /<path_to>/start_mcp.sh
+```
+
+2. **Configure .vscode/mcp.json** 
+
+Create a .vscode/mcp.json file in the root of your project directory with the following content:
+
+```bash
+{
+    "servers": {
+        "my-mcp-server": {
+            "type": "stdio",
+            "command": "/<path_to>/start-mcp.sh",
+            "args": []
+        }
+    }
+}
+```
+
+This configuration tells VS Code to use the start-mcp.sh script to start the MCP server.
+
+2. **Add the MCP Server to GitHub Copilot** 
+
+To add the the server to your copilot and use the tools in mcp server
+
+- Open Copilot in Visual Studio Code.
+- Swith to Agent mode in Chat view
+- Select Tools button to view the tools
+
+see more in the official [site](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server-to-your-user-settings)
 
 ---
 
