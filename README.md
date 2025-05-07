@@ -182,7 +182,7 @@ Create a shell script named start-mcp.sh to activate the virtual environment and
 #!/bin/bash
 
 # Navigate to the project directory
-cd /<path_to>?/mcp-server-yahoo-finance || { echo "Directory not found"; exit 1; }
+cd /<path_to>/mcp-server-yahoo-finance || { echo "Directory not found"; exit 1; }
 
 # Activate the virtual environment
 source .venv/bin/activate || { echo "Failed to activate virtual environment"; exit 1; }
@@ -216,7 +216,7 @@ Create a .vscode/mcp.json file in the root of your project directory with the fo
 
 This configuration tells VS Code to use the start-mcp.sh script to start the MCP server.
 
-2. **Add the MCP Server to GitHub Copilot** 
+3. **Add the MCP Server to GitHub Copilot** 
 
 To add the the server to your copilot and use the tools in mcp server
 
